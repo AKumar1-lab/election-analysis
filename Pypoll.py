@@ -19,5 +19,7 @@ with open(file_to_load) as election_data:
      print(election_data)
 
 with open(file_to_save, "w") as txt_file:
-   txt_file.write("Arapahoe\nDenver\nJefferson")
+   txt_file.write("Counties in the Election\n")
+   txt_file.write("-" * 22)
+   txt_file.write("\nArapahoe\nDenver\nJefferson")
 txt_file.close()
