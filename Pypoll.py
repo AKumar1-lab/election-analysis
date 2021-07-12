@@ -14,12 +14,16 @@ file_to_save = os.path.join("election_analysis","analysis","election_analysis.tx
 
 # Open the election results and read the file.
 with open(file_to_load) as election_data:
+    # To do: read and analyze the data here
+    # Read the file object with the reader function.
+    file_reader = csv.reader(election_data)
+    # Print each row in the CSV file.
+    for row in file_reader:
+        print(row)
 
-    # Print the file object.
-     print(election_data)
 
 with open(file_to_save, "w") as txt_file:
    txt_file.write("Counties in the Election\n")
-   txt_file.write("-" * 22)
+   txt_file.write("-" * 20)
    txt_file.write("\nArapahoe\nDenver\nJefferson")
 txt_file.close()
