@@ -86,7 +86,13 @@ for candidate_name in candidate_votes:
          
 # Determine the percentage of votes for each candidate by looping through the counts.
 # Iterate through the candidate list.
-
+winning_candidate_summary = (
+    f"-------------------------\n"
+    f"Winner: {winning_candidate}\n"
+    f"Winning Vote Count: {winning_count:,}\n"
+    f"Winning Percentage: {winning_percentage:.1f}%\n"
+    f"-------------------------\n")
+print(winning_candidate_summary)
 
 
 with open(file_to_save, "w") as txt_file:
