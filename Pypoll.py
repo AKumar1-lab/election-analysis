@@ -17,9 +17,11 @@ with open(file_to_load) as election_data:
     # To do: read and analyze the data here
     # Read the file object with the reader function.
     file_reader = csv.reader(election_data)
+    headers = next(file_reader)
+    print(headers)
     # Print each row in the CSV file.
-    for row in file_reader:
-        print(row)
+    #for row in file_reader:
+    #   print(row)
 
 
 with open(file_to_save, "w") as txt_file:
